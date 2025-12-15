@@ -1,6 +1,10 @@
-# MR. MISSLE 🎮
+# MR. MISSLE 🚀
 
-A 2D top-down bullet hell game created for a game jam!
+A 2D top-down bullet hell game - now playable in your browser!
+
+## 🎮 Play Online
+
+Play the game directly at: **[Your GitHub Pages URL]**
 
 ## Game Concept
 **Genre:** Bullet Hell  
@@ -8,71 +12,120 @@ A 2D top-down bullet hell game created for a game jam!
 
 ## How It Works
 - **You have 1 HP** - One hit from any bullet and you die!
-- **Boss has 1 HP** - Touch the boss once to win!
+- **Boss has multiple phases** - Hit the boss when it's vulnerable (golden glow)!
 - **Dodge massive bullet patterns** while trying to reach the boss
+- **Graze bullets** (near misses) to earn bonus points and build combos
 - **Progressive difficulty** - Each level gets harder with more complex patterns
 
-## Controls
+## 🎯 Controls
 - **Move:** WASD or Arrow Keys
-- **Start Game:** SPACE (from menu)
-- **Restart:** R (after game over)
-- **Next Level:** SPACE (after winning)
+- **Navigate Menus:** Arrow Keys or WASD
+- **Select:** SPACE or ENTER
+- **Pause:** ESC
+- **Back:** ESC
 
-## Features
+## ✨ Features
 - 🎯 Precise hitbox system (small red dot on player)
-- 💥 5 different bullet patterns:
-  - Spiral
-  - Circle
-  - Aimed shots
-  - Wave pattern
-  - Random spray
-- 📈 Increasing difficulty with each level
-- 🎨 Clean visual design with color-coded elements
+- 💥 15 different bullet patterns including:
+  - Spiral attacks
+  - Circle bursts
+  - Homing missiles
+  - Splitting bullets
+  - Wave patterns
+  - And more!
+- 📈 20 levels with increasing difficulty
+- 🛒 Upgrade shop with 4 different upgrades:
+  - Speed Boost
+  - Bullet Time
+  - Lucky Dodge
+  - Attack Window
+- 💾 Progress saves automatically
 - ⚡ Smooth 60 FPS gameplay
+- 🎨 Beautiful animated backgrounds
+- 📱 Works on desktop browsers
 
-## How to Run
+## 🖥️ Running Locally
+
+### Web Version (Recommended)
+Simply open `index.html` in a modern web browser (Chrome, Firefox, Edge, Safari).
+
+For best results, use a local server:
 ```bash
-# Compile all Java files
+# Using Python
+python -m http.server 8000
+
+# Using Node.js
+npx serve .
+
+# Then open http://localhost:8000
+```
+
+### Java Version (Original)
+```bash
 cd src
 javac *.java
-
-# Run the game
 java App
 ```
 
-Or use your IDE's run button!
+## 🚀 Deploying to GitHub Pages
 
-## Tips for Survival
+1. **Push your code to GitHub:**
+   ```bash
+   git add .
+   git commit -m "Add web version of Mr. Missle"
+   git push origin main
+   ```
+
+2. **Enable GitHub Pages:**
+   - Go to your repository on GitHub
+   - Click **Settings** → **Pages**
+   - Under "Source", select **Deploy from a branch**
+   - Select **main** branch and **/ (root)** folder
+   - Click **Save**
+
+3. **Access your game:**
+   - Your game will be available at: `https://[username].github.io/[repository-name]/`
+   - It may take a few minutes for the first deployment
+
+## 🎮 Tips for Survival
 1. Focus on the small red dot - that's your actual hitbox
 2. Move smoothly and avoid panicking
 3. Stay near the edges to have more escape routes
-4. Watch the boss's position to plan your winning touch
-5. Each level increases bullet count and fire rate - good luck!
+4. Watch for the golden glow - that's when the boss is vulnerable
+5. Graze bullets to build combos and earn bonus money
+6. Spend money on upgrades between runs!
 
-## Game Jam Theme
-**Genre:** Bullet Hell  
-**Rule:** 1 HP
+## 🗂️ Project Structure
 
-The game perfectly fits the theme by making every moment matter - one mistake and it's game over, but one successful touch and you win!
+```
+MrMissleGithubPageTest/
+├── index.html          # Main HTML file
+├── css/
+│   └── styles.css      # Game styling
+├── js/
+│   ├── game.js         # Main game controller
+│   ├── player.js       # Player class
+│   ├── boss.js         # Boss with attack patterns
+│   ├── bullet.js       # Bullet system
+│   ├── particle.js     # Visual effects
+│   ├── renderer.js     # UI rendering
+│   ├── gameData.js     # Save/load system
+│   └── utils.js        # Utilities & helpers
+├── src/                # Original Java source
+└── sprites/            # Game sprites
+```
+
+## 🎨 Credits
+
+- Game Design & Programming: [Your Name]
+- Sound Effects: Various sources (see Licenses folder)
+- Sprites: Custom made
+
+## 📜 License
+
+This project is open source. See individual files in the Licenses folder for asset-specific licenses.
 
 ---
 
-## Getting Started
-
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
-
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+**Enjoy the game and good luck dodging those bullets! 🎮**
 

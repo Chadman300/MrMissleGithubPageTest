@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1a1a2e;
+    overflow: hidden;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+#game-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#gameCanvas {
+    background-color: #16213e;
+    display: block;
+}
+
+/* Loading Screen */
+#loading-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: opacity 0.5s ease-out;
+}
+
+#loading-screen.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.loading-content {
+    text-align: center;
+}
+
+.loading-content h1 {
+    font-size: 72px;
+    color: #e94560;
+    text-shadow: 0 0 20px rgba(233, 69, 96, 0.5),
+                 0 0 40px rgba(233, 69, 96, 0.3);
+    margin-bottom: 40px;
+    letter-spacing: 8px;
+}
+
+.loading-bar-container {
+    width: 400px;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 0 auto 20px;
+}
+
+.loading-bar {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #e94560, #ff6b6b);
+    border-radius: 4px;
+    transition: width 0.3s ease-out;
+}
+
+#loading-text {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+/* Prevent text selection during gameplay */
+#game-container {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+/* Mobile touch optimization */
+@media (max-width: 768px) {
+    .loading-content h1 {
+        font-size: 48px;
+    }
+    
+    .loading-bar-container {
+        width: 280px;
+    }
+}
+
+/* Focus outline removal for canvas */
+#gameCanvas:focus {
+    outline: none;
+}
